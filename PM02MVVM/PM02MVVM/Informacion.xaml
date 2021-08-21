@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02MVVM.Informacion">
+    <ContentPage.Content>
+
+        <StackLayout Padding="0,0">
+            <ScrollView>
+                
+
+            <Frame Margin="10">
+                <StackLayout>
+                    <Entry IsVisible="false"  Text="{Binding Id}"/>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+                        
+                        <Entry Placeholder="Nombre" Grid.Row="0" Grid.Column="1" Text="{Binding Name}"/>
+
+                    </StackLayout>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+
+                        
+                        <Entry Placeholder="Apellido" Grid.Row="1" Grid.Column="1" Text="{Binding Apellido}"/>
+
+                    </StackLayout>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+
+
+                        
+                        <Entry Placeholder="Email" Grid.Row="2" Grid.Column="1" Text="{Binding Correo}"/>
+
+
+                    </StackLayout>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+
+
+                        
+                        <Entry Placeholder="Edad" Grid.Row="3" Keyboard="Numeric" Grid.Column="1" Text="{Binding Edad}"/>
+
+
+                    </StackLayout>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+
+
+                        
+                        <Entry Placeholder="Direccion" Grid.Row="4" Grid.Column="1" Text="{Binding Direccion}" />
+                    </StackLayout>
+                    <StackLayout Margin="10"  Orientation="Vertical">
+
+
+                        
+                        <Entry Placeholder="Puesto" Grid.Row="5" Grid.Column="1" Text="{Binding Puesto}" />
+                    </StackLayout>
+                        <StackLayout Margin="10"  Orientation="Vertical">
+                            <Button BackgroundColor="Green" Text="Borrar" Command="{Binding DeleteCommand }"></Button>
+                            <Button BackgroundColor="Green" Text="Actualizar" Command="{Binding UpdateCommand }"></Button>
+                            <Button BackgroundColor="Green" Text="Limpiar Datos" Command="{Binding ClearCommand }"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+           </ScrollView>
+        </StackLayout>
+
+    </ContentPage.Content>
+        
+</ContentPage>

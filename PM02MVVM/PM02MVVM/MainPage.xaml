@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PM02MVVM.MainPage"
+             Title="Nuevo Empleado">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Lista de Empleados" Priority="0" Order="Primary" Clicked="lista_Clicked">
+        </ToolbarItem>
+
+    </ContentPage.ToolbarItems>
+    <StackLayout FlexLayout.AlignSelf="Center">
+        <Frame Margin="10" Padding="0,20" CornerRadius="10">
+            <Label Text="Tarea MVVM / Edwin Daniel Merino " HorizontalTextAlignment="Center" TextColor="black" FontSize="30"/>
+        </Frame>
+        <Label Text="Nuevo Empleado" HorizontalTextAlignment="Center" TextColor="black" FontSize="22"/>
+
+        <ScrollView BackgroundColor="White">
+            <Frame Margin="10" Padding="5,5">
+                <StackLayout Padding="0,0">
+
+                    
+                    <Entry Placeholder="Nombre" Text="{Binding Name,Mode=TwoWay}"  x:Name="nombre"></Entry>
+                    
+                    <Entry Placeholder="Apellido" Text="{Binding Apellido,Mode=TwoWay}"  x:Name="apellido"></Entry>
+                    
+                    <Entry Placeholder="Edad" Text="{Binding Edad,Mode=TwoWay}" Keyboard="Numeric"  x:Name="edad"></Entry>
+                   
+                    <Entry Placeholder="Email" Text="{Binding Correo,Mode=TwoWay}" Keyboard="Email" x:Name="correo"></Entry>
+                    
+                    <Entry Placeholder="Direccion" Text="{Binding Direccion,Mode=TwoWay}" x:Name="direccion"></Entry>
+                    
+                    <Entry Placeholder="Puesto" Text="{Binding Puesto,Mode=TwoWay}"  x:Name="puesto"></Entry>
+                    
+
+                    <Button Margin="10" FontFamily="Ubuntu" x:Name="btnSave" Command="{Binding GuardarCommand,Mode=TwoWay}"
+                        Text="Guardar "
+                        BackgroundColor="green"
+                        TextColor="White" CornerRadius="10" 
+                        FontSize="23" Padding="30,10,30,10"/>
+
+
+                </StackLayout>
+            </Frame>
+
+        </ScrollView>
+
+
+    </StackLayout>
+
+
+</ContentPage>
